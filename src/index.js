@@ -1,14 +1,13 @@
 import _ from 'lodash';
 import printMe from './print.js';
 import './assets/style/style.css';
-import Icon from './assets/images/pin-icon.png';
+import Icon from './assets/images/home-icon.png';
 
 function component() {
     const element = document.createElement('div');
     const btn = document.createElement('button');
+    const lineBreak = document.createElement("br");
   
-    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-    //element.innerHTML = 'morjens';
     element.classList.add('hello');
 
     btn.innerHTML = 'Click me and check the console!';
@@ -20,6 +19,8 @@ function component() {
     myIcon.src = Icon;
 
     element.appendChild(myIcon);
+    element.appendChild(lineBreak);
+    element.appendChild(btn);
 
     return element;
   }
